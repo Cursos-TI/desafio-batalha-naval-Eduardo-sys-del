@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int tabuleiro[5][5] = {0};  // Matriz 5x5 inicializada com zeros
+
+    // Posicionando navio vertical (tamanho 3) na coluna 1
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[i][1] = 3;
+        printf("Navio vertical em (%d, 1)\n", i);
+    }
+
+    // Posicionando navio horizontal (tamanho 4) na linha 4
+    for (int j = 0; j < 4; j++) {
+        tabuleiro[4][j] = 3;
+        printf("Navio horizontal em (4, %d)\n", j);
+    }
+
+    // Exibindo o tabuleiro final
+    printf("\nTabuleiro:\n");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            printf("%d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
